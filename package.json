@@ -1,0 +1,40 @@
+{
+  "name": "component-library-test",
+  "version": "1.0.0",
+  "main": "dist/cjs/index.js",
+  "module": "dist/es/index.js",
+  "files": [
+    "dist",
+    "font"
+  ],
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "classnames": "2.2.6",
+    "prop-types": "15.7.2",
+    "react": "16.13.0",
+    "react-jss": "10.0.4",
+    "react-measure": "2.3.0",
+    "react-spring": "8.0.27",
+    "rollup": "1.32.0"
+  },
+  "peerDependencies": {
+    "prop-types": ">=15.7.2",
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0",
+    "react-jss": ">=10.0.4"
+  },
+  "devDependencies": {
+    "@babel/core": "7.8.6",
+    "@babel/preset-env": "7.8.6",
+    "@babel/preset-react": "7.8.3",
+    "@rollup/plugin-commonjs": "11.0.2",
+    "@rollup/plugin-node-resolve": "7.1.1",
+    "rollup-plugin-babel": "4.3.3"
+  }
+}

@@ -1,0 +1,12 @@
+{
+    "extends": ["prettier", "react-app", "plugin:jsx-a11y/recommended", "plugin:mdx/recommended"],
+    "plugins": ["prettier", "jsx-a11y"],
+    "rules": {
+        "prettier/prettier": "error"
+    },
+    "globals": {
+        "mount": true,
+        "shallow": true,
+        "themeMount": true
+    }
+}

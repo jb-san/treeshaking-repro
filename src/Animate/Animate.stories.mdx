@@ -1,0 +1,127 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+
+import * as Stories from './Animate.stories'
+import { Animate } from '../../../';
+import { Drop, Height, Rotate, PopIn, SlideIn, SlideDown, Fade } from './animations'
+
+<Meta title="Components|Animate" component={Animate} />
+
+# Animate
+
+
+Our UI animation should enhance and improve usability in a way that the user (almost) don't notice.
+
+It should be subtle but clear in the **intention**:
+
+- Create focus on a certain task (custom select)
+- Create focus an certain information (expanding content, modal window)
+- Highlight dynamic content (Pricebar)
+- Give user feedback (Validation)
+- Illustrate or tweak perception of time (Loading bar)
+
+It should be subtle but clear and repetitive in **motion**:
+
+- It should help the user understand how the information flows (vertical/horizontal e.g. steps and accordions)
+- It should be cohensive throughout the site and help the user's orientation on the site (repetitive animations and interaction states)
+- It should help to make content more alive
+
+It should set our UI-elements in context of Folksam's **brand**:
+
+The company with the big heart (engaged, personal, responsive) needs an UI that feels human (not like today robotic on and off states)
+
+
+
+
+## The `Animate` component
+
+```js
+import { Animate } from 'folksam-ui';
+```
+
+**<Animate/\>** is the mother component upon which all of the animations reside as subcomponents, eg. `Animate.drop`, `Animate.slideIn` and so on.
+In general, the thing that is to be animated is passed as children, like so:
+
+```js
+<Animate.drop>
+    {shouldBeDropped ? <ChildComponent/> : null}
+</Animate.drop>
+```
+
+The animations that don't have the same kind of appearing/disappearing behaviour generally require using some kind of `isActive` prop, eg:
+
+```js
+<Animate.rotate isActive={shouldRotate} degrees={45} direction={'left'}>
+    <ChildComponent />
+</Animate.rotate>
+```
+
+## Animate.drop
+
+<Props of={Drop}/>
+
+<Preview>
+    <Story name="Animate.drop">
+        {Stories.Drop()}
+    </Story>
+</Preview>
+
+
+## Animate.height
+
+<Props of={Height}/>
+
+<Preview>
+    <Story name="Animate.height">
+        {Stories.Height()}
+    </Story>
+</Preview>
+
+## Animate.rotate
+
+<Props of={Rotate}/>
+
+<Preview>
+    <Story name="Animate.rotate">
+        {Stories.Rotate()}
+    </Story>
+</Preview>
+
+## Animate.popIn
+
+<Props of={PopIn}/>
+
+<Preview>
+    <Story name="Animate.popIn">
+        {Stories.PopIn()}
+    </Story>
+</Preview>
+
+## Animate.slideIn
+
+<Props of={SlideIn}/>
+
+<Preview>
+    <Story name="Animate.slideIn">
+        {Stories.SlideIn()}
+    </Story>
+</Preview>
+
+## Animate.slideDown
+
+<Props of={SlideDown}/>
+
+<Preview>
+    <Story name="Animate.slideDown">
+        {Stories.SlideDown()}
+    </Story>
+</Preview>
+
+## Animate.fade
+
+<Props of={Fade}/>
+
+<Preview>
+    <Story name="Animate.fade">
+        {Stories.Fade()}
+    </Story>
+</Preview>
